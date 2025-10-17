@@ -1,0 +1,33 @@
+services:
+  mysql:
+    image: mysql:8.0.34
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=pass
+
+  postgres:
+    image: postgres:15
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=pass
+
+
+  gate-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '9999:9999'
+    depends_on:
+      - mysql
+      - postgres
+    restart: unless-stopped
