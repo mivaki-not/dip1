@@ -1,4 +1,4 @@
-[![Java CI with Gradle](https://github.com/mivaki-not/Diplom1/actions/workflows/gradle.yml/badge.svg)](https://github.com/mivaki-not/Diplom1/actions/workflows/gradle.yml)
+[![Java CI with Gradle](https://github.com/mivaki-not/dip1/actions/workflows/gradle.yml/badge.svg)](https://github.com/mivaki-not/dip1/actions/workflows/gradle.yml)
 
 # Курсовой проект по модулю «Автоматизация тестирования» для профессии «Инженер по тестированию»
 Курсовой проект — автоматизация тестирования комплексного сервиса, взаимодействующего с СУБД и API банка.
