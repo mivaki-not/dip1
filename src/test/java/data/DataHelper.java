@@ -9,6 +9,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class DataHelper {
     private static final Faker faker = new Faker(new Locale("en"));
 
+    private DataHelper() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
+
     public static CardInfo getApprovedCard() {
         return new CardInfo(
                 "4444 4444 4444 4441",

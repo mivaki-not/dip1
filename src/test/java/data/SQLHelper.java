@@ -12,6 +12,10 @@ public class SQLHelper {
     private static final String user = System.getProperty("db.user");
     private static final String password = System.getProperty("db.password");
 
+    private SQLHelper() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
+
     @SneakyThrows
     public static String getPaymentStatus() {
         var conn = getConnection();
